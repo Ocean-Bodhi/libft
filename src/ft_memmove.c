@@ -21,10 +21,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	ptr_d = (unsigned char *)dst;
 	ptr_s = (const unsigned char *)src;
-	if (dst <= src)
+	if (len == 0 || dst == src)
+		return (dst);
+	if (dst < src)
 	{
-		while (i++ < len)
-			*ptr_d++ = *ptr_s++;
+		while (i < len)
+		{
+			ptr_d[i] = ptr_s[i];
+			i++;
+		}
 	}
 	else
 	{
@@ -32,4 +37,20 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			ptr_d[len] = ptr_s[len];
 	}
 	return (dst);
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	char	s[] = "Hello 42";
+	char	d1[7];
+	char	d2[7];
+
+	ft_memmove(d1, s, 7);
+	memmove(d2, s, 7);
+	printf("Origen es %s y destino es %s con la mía\n", s, d1);
+	printf("Origen es %s y destino es %s con la suya\n", s, d2);
+	return (0);
 }

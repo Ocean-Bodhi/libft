@@ -14,15 +14,16 @@ RETURN VALUES
 
 void *ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*str;
+	const unsigned char	*str;
 	size_t	i;
 
 	str = (const unsigned char *)s;
 	i = 0;
-	while (i++ < n)
+	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
 			return (str[i]);
+		i++;
 	}
 	return (NULL);
 }

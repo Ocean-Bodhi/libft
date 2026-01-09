@@ -19,16 +19,36 @@ RETURN VALUES
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const unsigned char	*ss1;
-	const unsigned char	*ss2;
+	const unsigned char *str1;
+	const unsigned char *str2;
 	size_t	i;
 
-	ss1 = (const unsigned char *)s1;
-	ss2 = (const unsigned char *)s2;
+	str1 = (const unsigned char *)s1;
+	str2 = (const unsigned char *)s2;
 	i = 0;
-	if (ss1 =! null && ss2 =! null)
-		while (i++ < n)
-			if (ss1[i] =! ss2[i])
-				return (ss1[i] - ss2[i]);
-	return (ss1 - ss2];
+	while (i < n)
+	{
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
+		i++;
+	}
+	return (0);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	const char s1[] = "";
+	const char s2[] = "";
+	int	n = 0;
+	int	m = 0;
+
+	n = ft_memcmp(s1, s2, 9);
+	m = memcmp(s1, s2, 9);
+	printf("Mine is %d\n", n);
+	printf("Theirs is %d\n", m);
+	return (0);
+}
+*/
