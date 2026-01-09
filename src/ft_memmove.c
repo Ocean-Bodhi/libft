@@ -38,7 +38,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-
+/*
 #include <stdio.h>
 #include <string.h>
 
@@ -54,3 +54,4 @@ int	main(void)
 	printf("Origen es %s y destino es %s con la suya\n", s, d2);
 	return (0);
 }
+*/

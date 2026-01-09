@@ -12,7 +12,7 @@ RETURN VALUES
 
 #include <stddef.h>
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	const unsigned char	*str;
 	size_t	i;
@@ -22,8 +22,26 @@ void *ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
-			return (str[i]);
+			return ((void *)&str[i]);
 		i++;
 	}
 	return (NULL);
 }
+/*
+#include <stdio.h>
+#include <string.h>
+
+int	main(void)
+{
+	const char str[] = "Hello 42";
+	int	ch = 'e';
+	char	*ptr1;
+	char	*ptr2;
+
+	ptr1 = ft_memchr(str, ch, 12);
+	ptr2 = memchr(str, ch, 12);
+	printf("Mines is %p\n", ptr1);
+	printf("Theirs is %p\n", ptr2);
+	return (0);
+}
+*/
