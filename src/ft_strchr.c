@@ -31,15 +31,14 @@ char	*ft_strchr(const char *s, int c)
 
 	d = (unsigned char)c;
 	i = 0;
-	while (s[i])
+	while (1)
 	{
-		if (s[i] == d)
+		if ((unsigned char)s[i] == d)
 			return ((char *)s + i);
-		if (s[i] == '\0')
-		
+		if ((unsigned char)s[i] == '\0')
+			return (NULL);
 		i++;
 	}
-	return (NULL);
 }
 
 #include <string.h>
