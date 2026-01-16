@@ -1,10 +1,13 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <unistd.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
+# include <unistd.h> // write (putchar_fd, putstr_fd, putendl_fd, putnbr_fd)
+# include <stddef.h> // size_t y NULL (strlen, memcpy, memmove, strlcpy, calloc)
+# include <stdlib.h> // para malloc y free (calloc, strdup, substr, split)
+//*Prohibidas:
+# include <stdio.h>
+//#include <string.h>
+//<ctype.h>
 
 // Part 1
 int		ft_isalpha(int c);
@@ -23,5 +26,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
