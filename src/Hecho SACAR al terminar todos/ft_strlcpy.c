@@ -6,7 +6,8 @@ size_t	strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
 SYNOPSIS
      #include <string.h>
 
-     size_t strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);	
+size_t strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);
+	
      En libft:
 
 🚫 NO debes usar restrict en tus prototipos
@@ -94,7 +95,7 @@ EXAMPLES
      fact, the first version of this manual page got it wrong.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
@@ -107,7 +108,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		i++;
 	if (dstsize == 1)
 		dst[0] = '\0';
-	if (dstsize  > 1)
+	if (dstsize > 1)
 	{
 		while (src[j] && j < (dstsize - 1))
 		{
@@ -118,8 +119,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (i);
 }
-
-#include <stdio.h>
+/*
 #include <string.h>
 
 int	main(void)
@@ -147,3 +147,4 @@ int	main(void)
 		printf("Ha habido truncamiento");
 	return (0);
 }
+*/

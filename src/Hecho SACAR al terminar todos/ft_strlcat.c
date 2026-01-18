@@ -83,7 +83,7 @@ EXAMPLES
      fact, the first version of this manual page got it wrong.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -109,9 +109,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (i + j);
 }
-
+/*
 #include <string.h>
-#include <stdio.h>
 
 int	main(void)
 {
@@ -136,3 +135,4 @@ int	main(void)
 	printf ("Theirs: %zu\n", m);
 	return (0);
 }
+*/

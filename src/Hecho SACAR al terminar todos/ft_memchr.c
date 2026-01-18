@@ -10,7 +10,7 @@ RETURN VALUES
      or NULL if no such byte exists within n bytes.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

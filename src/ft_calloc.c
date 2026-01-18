@@ -32,14 +32,16 @@ DESCRIPTION
      memory.  The allocated memory is filled with bytes of value zero.
 
 RETURN VALUES
-     If successful, calloc() & malloc() functions return a pointer to allocated memory.  If there
-     is an error, they return a NULL pointer and set errno to ENOMEM.
+     If successful, calloc() & malloc() functions return a pointer to allocated
+     memory.  If there is an error, they return a NULL pointer and set errno to
+     ENOMEM.
 
      The free() function does not return a value.
 
 Para DEBUGGING ALLOCATION ERRORS ir a man malloc
-
-Te lo explico **como corrector de 42**, corto pero riguroso, centrándonos en *qué hacen de verdad* y *qué errores te suspenden*.
+	
+Te lo explico **como corrector de 42**, corto pero riguroso, centrándonos en
+*qué hacen de verdad* y *qué errores te suspenden*.
 
 ---
 
@@ -58,7 +60,8 @@ void *malloc(size_t size);
 
 ### Consecuencias reales
 
-* Leer memoria devuelta por `malloc` **antes de escribirla** ⇒ **comportamiento indefinido**.
+* Leer memoria devuelta por `malloc` **antes de escribirla** ⇒ **comportamiento
+indefinido**.
 * El tipo del puntero lo decides tú al hacer el cast:
 
   int *p = malloc(10 * sizeof(int));

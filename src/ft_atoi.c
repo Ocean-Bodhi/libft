@@ -36,14 +36,14 @@ Para cuando encuentra un carácter no-dígito
 int	ft_atoi(const char *str)
 {
 	size_t	i;
-	int	result;
-	int	sign;
+	int		result;
+	int		sign;
 
 	i = 0;
 	result = 0;
 	sign = 1;
 	while (str[i] && ((str[i] >= 9 && str[i] <= 13) || str[i] == 32))
-			i++;
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
@@ -57,7 +57,7 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-
+/*
 int	main(void)
 {
 	//const char	s2[] = " -+-42"; // 0
@@ -73,3 +73,4 @@ int	main(void)
 	printf("Theirs de '%s' es: %d\n", s2, atoi(s2));
 	return (0);
 }
+*/

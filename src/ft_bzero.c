@@ -3,13 +3,21 @@ void	bzero(void *s, size_t n);
 DESCRIPTION
 The bzero() function writes n zeroed bytes to the string s.
 If n is zero, bzero() does nothing.
+
+>>> Algunas de las funciones que debes rehacer, como strlcpy, strlcat y
+bzero, no están incluidas por defecto en la biblioteca GNU C (glibc).
+Para compararlas con la versión estándar del sistema, puede ser
+necesario incluir <bsd/string.h> y compilar con la opción -lbsd.
+Este comportamiento es propio de los sistemas basados en glibc. Si
+tienes interés, vale la pena aprovechar la ocasión para explorar las
+diferencias entre glibc y la biblioteca libc de BSD. <<<
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*ptr;
 
 	i = 0;
@@ -32,8 +40,8 @@ int	main(void)
 	ft_bzero(arr, sizeof(arr));
 	while (j < sizeof (arr))
 	{
-		printf("La array contiene estos valores\
-		 en memoria [%zu]: %d\n", j, arr[j]);
+		printf("La array contiene estos valores "
+			"en memoria [%zu]: %d\n", j, arr[j]);
 		j++;
 	}
 	return (0);

@@ -10,7 +10,7 @@ RETURN VALUES
 The memcpy() function returns the original value of dst.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {

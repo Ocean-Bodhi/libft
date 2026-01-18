@@ -21,7 +21,7 @@ RETURN VALUES
      The functions strchr() and strrchr() return a pointer to the located
      character, or NULL if the character does not appear in the string.
 */
-# include "libft.h"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
@@ -35,7 +35,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i != 0)
 	{
 		if ((unsigned char)s[i] == d)
-			 return ((char *)s + i);
+			return ((char *)s + i);
 		i--;
 	}
 	if ((unsigned char)s[0] == d)

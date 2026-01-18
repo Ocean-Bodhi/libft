@@ -22,7 +22,7 @@ RETURN VALUES
      character, or NULL if the character does not appear in the string.
 */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -40,9 +40,8 @@ char	*ft_strchr(const char *s, int c)
 		i++;
 	}
 }
-
+/*
 #include <string.h>
-#include <stdio.h>
 
 int	main(void)
 {
@@ -52,8 +51,9 @@ int	main(void)
 	//c = 'o';
 	c = '\0';
 	//c = 'p';
-	printf("En la str '%s', el caracter %d aparece en la posición %p\n", \
+	printf("En la str '%s', el caracter %d aparece en la posición %p\n",
 	s1, c, ft_strchr(s1, c));
 	printf("Theirs: %p\n", strchr(s1, c));
 	return (0);
 }
+*/
