@@ -14,6 +14,10 @@ Funciones autorizadas: malloc
 Descripción:
 Reserva memoria (con malloc(3)) y devuelve una copia de ‘s1’
 con los caracteres de ‘set’ eliminados al principio y al final.
+
+>>> Aquí: while (i && ft_strchr(set, s1[i - 1]))
+hago s1[i -1] para no contar el '\0'.
+Y no he de añadir en el return el '\0' porque ft_substr ya lo añade.
 */
 
 #include "libft.h"
