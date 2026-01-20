@@ -19,8 +19,42 @@ utilizando el carácter ‘c’ como delimitador.
 El arreglo debe terminar con un puntero a NULL.
 */
 
+
+#include "libft.h"
+
+static	size_t x_words(char const *s, char c)
+{
+	size_t	words;
+	size_t	i;
+
+	words = 0;
+	i = 0;
+	while (s[i])
+	{
+		while (s[i] == c)
+			i++;
+		if (s[i])
+		{
+			words++;
+			while (s[i] && s[i] != c)
+				i++;
+		}
+	}
+	return (words);
+}
+
 char	**ft_split(char const *s, char c)
 {
+	char	**tab;
+	size_t	words;
 
-
-}
+	if (!s)
+		return (NULL);
+	words = x_words(s, c);
+	tab = malloc((words + 1) * sizeof(char *));
+	if (!tab)
+		return (NULL);
+	tab[words] = NULL;
+		
+	
+	
