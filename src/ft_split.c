@@ -97,8 +97,8 @@ char	**ft_split(char const *s, char c)
 int	main(void)
 {
 	const char	s[] = "  La Rosa de los vientos";
-	//char	c = 'o';
-	char	c = ' ';
+	char	c = 'o';
+	//char	c = ' ';
 	size_t	i = 0;
 	char	**tab;
 
