@@ -10,5 +10,7 @@ Pero como el man isprint da OCTAL, uso eso.
 */
 int	ft_isprint(int c)
 {
-	return (c >= 040 && c <= 176);
+	unsigned char	uc;
+	uc = (unsigned char)c;
+	return (uc >= 32 && uc <= 126);
 }

@@ -42,7 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*p = '\0';
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	char const	s1[] = "Hello";
@@ -56,3 +56,4 @@ int	main(void)
 	free(poi);
 	return (0);
 }
+*/
