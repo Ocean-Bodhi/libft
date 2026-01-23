@@ -14,7 +14,7 @@ The memcpy() function returns the original value of dst.
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	size_t	i;
+	size_t		i;
 	unsigned char	*ptr_d;
 	const unsigned char	*ptr_s;
 

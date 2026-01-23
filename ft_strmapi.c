@@ -27,7 +27,7 @@ Descripción:
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	size_t	len;
+	size_t		len;
 	char	*result;
 
 	i = 0;

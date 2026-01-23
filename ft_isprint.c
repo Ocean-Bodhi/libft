@@ -8,9 +8,11 @@ In the ASCII character set, this includes the following characters
 En decimal seria 32 - 126. 
 Pero como el man isprint da OCTAL, uso eso.
 */
+
 int	ft_isprint(int c)
 {
 	unsigned char	uc;
+
 	uc = (unsigned char)c;
 	return (uc >= 32 && uc <= 126);
 }
