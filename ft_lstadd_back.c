@@ -24,13 +24,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*node;
 
 	if (!new || !lst)
-		return;
+		return ;
 	if (*lst == NULL)
 	{
 		*lst = new;
-		return;
+		return ;
 	}
 	node = *lst;
 	node = ft_lstlast(*lst);
-		node->next = new;
+	node->next = new;
 }
